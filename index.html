@@ -1,372 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hoang Trieu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..600;1,400..600&family=Plus+Jakarta+Sans:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Navigation -->
+
   <nav id="navbar">
     <div class="nav-inner">
-      <a class="nav-brand" href="#home">Hoang Trieu</a>
+      <a class="nav-brand" href="index.html">Hoang Trieu</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#courses">Courses</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="thoughts.html">Thoughts</a></li>
+        <!-- <li><a href="ta.html">TA</a></li> -->
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="leadership.html">Leadership</a></li>
+        <li><a href="travel.html">Travel</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <div class="hero-photo">
-        <img src="assets/profile.jpg" alt="Hoang Trieu" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-        <div class="photo-placeholder">HT</div>
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-photo-box">
+        <div class="hero-photo">
+          <img class="crop-top" src="assets/profile2.jpg" alt="Hoang Trieu" onerror="imgFail(this,'HT')" />
+        </div>
+        <div class="hero-photo-caption">
+          <span class="cap-dot"></span>
+          2026 Outstanding Undergrad Research Award &middot; MAA Illinois
+        </div>
       </div>
       <div class="hero-text">
-        <p class="hero-eyebrow">Hello, I'm</p>
-        <h1 class="hero-name">Hoang Trieu</h1>
-        <p class="hero-tagline">You only need 2 seconds on this website to know how much I love doing&nbsp;<strong>Math</strong> (and Physics, and Computer Science).</p>
-        <p class="hero-sub">Mathematics &amp; Computer Science @ <strong>Augustana College</strong> · Rock Island, IL<br/>
-          Incoming PhD student in <strong>AMSC</strong> @ University of Maryland · Fall&nbsp;2026</p>
-        <div class="hero-badges">
-          <span class="badge">Applied Mathematics</span>
-          <span class="badge">Statistics</span>
-          <span class="badge">Scientific Computation</span>
+        <p class="hero-greeting">I'M GLAD YOU ARE HERE!</p>
+        <h1 class="hero-headline">Hoang Trieu</h1>
+        <p class="hero-tagline">
+          You only need <span class="highlight-acc">2 seconds</span> on this website <br />
+          to know how much I love doing <span class="highlight-acc">Math</span>
+          <span class="tagline-sec">(and Physics, and Computer Science)</span>
+        </p>
+        <div class="hero-status-list">
+          <div class="hero-status-item">Incoming PhD in AMSC @ <strong>University of Maryland</strong> &middot; Fall
+            2026</div>
+          <div class="hero-status-item">Mathematics &amp; Computer Science Alum @ <strong>Augustana College</strong>
+          </div>
+        </div>
+        <div class="hero-tags">
+          <span class="tag">Applied Mathematics</span>
+          <span class="tag">Scientific Computation</span>
+          <span class="tag">Pi Mu Epsilon</span>
+          <span class="tag">Vietnam</span>
         </div>
         <div class="hero-cta">
-          <a href="#research" class="btn-primary">View Research</a>
-          <a href="#contact" class="btn-ghost">Get in Touch</a>
+          <a href="cv.html" class="btn btn-primary">View CV</a>
+          <a href="thoughts.html" class="btn btn-outlined">Thoughts</a>
+          <a href="travel.html" class="btn btn-outlined">Travel</a>
+          <a href="leadership.html" class="btn btn-outlined">Leadership</a>
         </div>
       </div>
-    </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- Research Timeline -->
-  <section id="research" class="section">
+  <!-- ===== Things That Keep Me Curious ===== -->
+  <section class="section section-curious reveal">
     <div class="container">
-      <h2 class="section-title">Research Journey</h2>
-      <p class="section-sub">An evolving path through mathematics, physics, and computation.</p>
+      <div class="curious-header">
+        <h2 class="section-title">Beyond Maths</h2>
+      </div>
+
+      <div class="curious-grid">
+
+        <!-- BSM Card -->
+        <div class="curious-card">
+          <div class="curious-card-img">
+            <img src="assets/profile4.jpg" alt="Budapest parliament and Danube" onerror="imgFail(this,'BSM')" />
+            <span class="curious-card-tag">Mathematics</span>
+          </div>
+          <div class="curious-card-body">
+            <h3>Budapest Semester in Math</h3>
+            <p>Spending a semester in Hungary completely changed how I think. Traveled 9 countries in 3 months, and I
+              would love to do it again!</p>
+          </div>
+        </div>
+
+        <!-- Slovakia Card -->
+        <div class="curious-card">
+          <div class="curious-card-img">
+            <img src="assets/profile1.jpg" alt="Hiking in High Tatras, Slovakia" onerror="imgFail(this,'SK')" />
+            <span class="curious-card-tag">Travel</span>
+          </div>
+          <div class="curious-card-body">
+            <h3>Wandering through Slovakia</h3>
+            <p>I love hiking with my friends after long weeks of Maths. Sometimes we go out for a chill walk. Sometimes
+              it is a full ironman mode, and if we are not careful enough we would be on TV the next morning. </p>
+          </div>
+        </div>
+
+        <!-- Ducks Card -->
+        <div class="curious-card">
+          <div class="curious-card-img">
+            <img src="assets/profile3.jpg" alt="Curious ducks swimming in a golden pond" onerror="imgFail(this,'🦆')" />
+            <span class="curious-card-tag">Small Joys</span>
+          </div>
+          <div class="curious-card-body">
+            <h3>My Colleagues: Ducks! </h3>
+            <p>I do have friends, but sometimes I trusted these ducks more than people. Three of them helped me a lot!
+            </p>
+          </div>
+        </div>
+
+        <!-- Community Card -->
+        <div class="curious-card">
+          <div class="curious-card-img">
+            <img src="assets/profile5.jpg" alt="Hoang with academic colleagues" onerror="imgFail(this,'SI')" />
+            <span class="curious-card-tag">Community</span>
+          </div>
+          <div class="curious-card-body">
+            <h3>Teaching</h3>
+            <p>I love teaching, and I actually learned a lot from my students. One of the best student in my TA class -
+              Colin - was actually came to my
+              graduation when my family could not make it. He's my brother now, and in fact, all of them are.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Research Timeline ===== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Research Interests</h2>
+      <p class="section-sub">I spent most of my undergraduate exploring different problems, though some of them are
+        highly connected.</p>
 
       <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-year">2023</div>
-          <div class="timeline-card">
-            <h3>Differential Equations for Mechanics</h3>
-            <p class="tl-affil">Beling Scholar Program · Augustana College · Advisor: Dr. Andrew Sward</p>
-            <p>Investigated predator-prey models using power series approximations in a reading course on non-linear differential equations. The work required deeper functional analysis techniques than were available at the time.</p>
+
+        <div class="tl-item future reveal">
+          <div class="tl-year">2027+</div>
+          <div class="tl-card star">
+            <h3>Open to What Comes Next</h3>
+            <p class="tl-affil">PhD, Applied Mathematics, Statistics &amp; Scientific Computation &middot; University of
+              Maryland</p>
+            <p>Starting the PhD journey in Fall 2026. Always open to new problems, collaborators, and adventures in
+              mathematics. If you have an interesting problem, let's talk.</p>
             <div class="tl-tags">
-              <span>ODE</span><span>Power Series</span><span>Mechanics</span>
+              <span class="tag">AMSC @ UMD</span>
+              <span class="tag">PhD</span>
             </div>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-year">2024</div>
-          <div class="timeline-card">
-            <h3>C-RCWA Numerical Method for Electro-optics</h3>
-            <p class="tl-affil">Augustana College · June 2024 – December 2024</p>
-            <p>Implemented a hybrid Python algorithm mitigating the Gibbs phenomenon in a Maxwell solver. Refactored the codebase to an object-oriented architecture and presented findings at two department events.</p>
+        <div class="tl-item reveal">
+          <div class="tl-year">2026</div>
+          <div class="tl-card">
+            <h3>Bound States in the Continuum</h3>
+            <p class="tl-affil">Undergraduate Thesis &middot; Augustana College</p>
+            <p>Investigating BIC phenomena in photonic systems for my undergraduate thesis — the full circle back to the
+              physics that started the electro-optics work.</p>
             <div class="tl-tags">
-              <span>Maxwell Solver</span><span>RCWA</span><span>Python</span><span>FEM</span>
+              <span class="tag">BIC</span>
+              <span class="tag">Photonics</span>
+              <span class="tag">Undergraduate Thesis</span>
             </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-year">2025</div>
+          <div class="tl-card star">
+            <h3>Closed Combinatorial &amp; Trigonometric Expansion of (1&minus;&zeta;<sub>p</sub>)<sup>n</sup></h3>
+            <p class="tl-affil">Budapest Semester in Mathematics + Augustana College &middot; June 2025 – Present</p>
+            <p>Derived new closed-form formulas for expanding (1&minus;&zeta;<sub>p</sub>)<sup>n</sup> involving
+              <em>p</em>-th roots of unity, with applications in algebraic number theory. Built Python simulations to
+              validate theoretical results. This problem is solved and was presented at the ISMAA conference
+              (Outstanding Undergraduate Award Winner)
+            </p>
+            <div class="tl-callout">
+              Algorithm runtime: <strong>O(2<sup>n</sup>)</strong> &rarr; <strong>O(n)</strong> &rarr; <strong>O(log
+                n)</strong>
+            </div>
+            <div class="tl-tags">
+              <span class="tag">Combinatorics</span>
+              <span class="tag">Roots of Unity</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-year">2024</div>
+          <div class="tl-card star">
+            <h3>C-RCWA Numerical Method for Electro-optics</h3>
+            <p class="tl-affil">Augustana College &middot; June – December 2024</p>
+            <p>Implemented a hybrid Python algorithm to mitigate the Gibbs phenomenon in a Maxwell solver. This
+              algorithm was initially developed by Dr. Benjamin Civiletti in his PhD Thesis for the University of
+              Delaware. Refactored
+              the codebase into an object-oriented architecture and presented the work at two department events. The
+              next steps of this project is to apply this hybrid in modeling different optical devices, which remains
+              opened </p>
             <ul class="tl-presentations">
               <li>Coordinate Transform Method for Solving Maxwell's Equations (2024)</li>
               <li>Interactive Workshop on Maxwell's Equations Solver (2024)</li>
             </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-year">2025</div>
-          <div class="timeline-card highlight">
-            <h3>Closed Combinatorial &amp; Trigonometric Expansion of (1&minus;&zeta;<sub>p</sub>)<sup>n</sup></h3>
-            <p class="tl-affil">Budapest Semester in Mathematics + Augustana College · June 2025 – Present</p>
-            <p>Derived novel closed-form formulas for the expansion of (1&minus;&zeta;<sub>p</sub>)<sup>n</sup> involving <em>p</em>-th roots of unity, with applications in algebraic number theory. Developed Python simulations validating theoretical results.</p>
-            <p class="tl-highlight">Algorithm runtime improved from <strong>O(2<sup>n</sup>)</strong> → <strong>O(n)</strong> → <strong>O(log n)</strong></p>
             <div class="tl-tags">
-              <span>Combinatorics</span><span>Algebraic Number Theory</span><span>Python</span><span>p-th Roots</span>
+              <span class="tag">Maxwell Solver</span>
+              <span class="tag">C-RCWA</span>
             </div>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-year">2026</div>
-          <div class="timeline-card">
-            <h3>Bound States in the Continuum</h3>
-            <p class="tl-affil">Undergraduate Thesis · Augustana College</p>
-            <p>Investigating bound states in the continuum (BIC) phenomena in photonic systems as the capstone research project of the undergraduate program.</p>
+        <div class="tl-item reveal">
+          <div class="tl-year">2023</div>
+          <div class="tl-card">
+            <h3>Differential Equations for Mechanics</h3>
+            <p class="tl-affil">Beling Scholar Program &middot; Augustana College &middot; Advisor: Dr. Andrew Sward</p>
+            <p>Prep-predator is a famous model that was intially studied by Bouguer. In the set up, a dog chases a
+              rabit, and both of them have constant velocities. What happens if the rabit now have a constant
+              acceleration instead? This is still an open problem. </p>
             <div class="tl-tags">
-              <span>BIC</span><span>Photonics</span><span>Physics</span>
+              <span class="tag">ODE</span>
+              <span class="tag">Predator-Prey Models</span>
             </div>
           </div>
         </div>
 
-        <div class="timeline-item future">
-          <div class="timeline-year">2027+</div>
-          <div class="timeline-card">
-            <h3>Open to Collaboration</h3>
-            <p>Starting the PhD journey in Applied Mathematics, Statistics, and Scientific Computation (AMSC) at the University of Maryland. Always open to new problems, collaborators, and adventures in mathematics.</p>
-            <div class="tl-tags">
-              <span>AMSC @ UMD</span><span>PhD</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience -->
-  <section id="experience" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Experience</h2>
-      <p class="section-sub">Beyond the equations — leadership, teaching, and community.</p>
-
-      <div class="exp-grid">
-        <div class="exp-card">
-          <div class="exp-icon">&#x1F4DA;</div>
-          <h3>Lead Supplemental Instructor</h3>
-          <p class="exp-org">Augustana College</p>
-          <p>Led supplemental instruction sessions for College Algebra and Multivariable Calculus, supporting students in building mathematical intuition.</p>
-        </div>
-
-        <div class="exp-card">
-          <div class="exp-icon">&#x1F310;</div>
-          <h3>Lead Program Coordinator</h3>
-          <p class="exp-org">International Student Services</p>
-          <p>Created and launched two new programs for the international student community, coordinating events and resources across campus.</p>
-        </div>
-
-        <div class="exp-card">
-          <div class="exp-icon">&#x1F393;</div>
-          <h3>Lead International Student Ambassador</h3>
-          <p class="exp-org">Admissions Office · Augustana College</p>
-          <p>Represented Augustana College in admissions recruitment, guiding prospective international students through the college search process.</p>
-        </div>
-
-        <div class="exp-card">
-          <div class="exp-icon">&#x1F4D6;</div>
-          <h3>Library Student Worker</h3>
-          <p class="exp-org">Augustana College Library</p>
-          <p>Assisted library operations with a focus on developing English language communication skills and supporting fellow students.</p>
-        </div>
-      </div>
-
-      <!-- Projects -->
-      <h3 class="subsection-title">Projects</h3>
-      <div class="proj-grid">
-        <div class="proj-card">
-          <div class="proj-header">
-            <h4>HAM Radio Simulator</h4>
-            <span class="proj-date">Sep – Dec 2024</span>
-          </div>
-          <p>Multi-user networking simulator deployed on Google Cloud Platform. Integrated AI chatbots using the Gemini API to simulate realistic radio communication scenarios.</p>
-          <div class="proj-tags">
-            <span>Google Cloud</span><span>Gemini API</span><span>Networking</span><span>Python</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Courses -->
-  <section id="courses" class="section">
+  <!-- ===== Courses ===== -->
+  <section class="section section-alt">
     <div class="container">
       <h2 class="section-title">Coursework</h2>
-      <p class="section-sub">Selected courses from Augustana College and Budapest Semester in Mathematics.</p>
+      <p class="section-sub">Interesting courses from Augustana College and the Budapest Semester in Mathematics.</p>
 
-      <div class="course-grid">
-        <div class="course-block">
-          <div class="course-term">Spring 2026</div>
-          <ul>
-            <li>Quantum Photonics</li>
-          </ul>
+      <div class="courses-grid">
+
+        <div class="course-card reveal">
+          <div class="course-card-img">
+            <img src="assets/courses/quantum-photonics.jpg" alt="Quantum Photonics"
+              onerror="imgFailCourse(this,'🔬','Quantum Photonics')" />
+          </div>
+          <div class="course-card-body">
+            <div class="course-term-badge">Spring 2026 &middot; Augustana College</div>
+            <h3>Quantum Photonics</h3>
+            <p>Basics of Quantum Math, Quantum System, Teleportation, and Quantum Algorithms</p>
+            <div class="course-card-tags">
+              <span class="tag">Photonics</span>
+              <span class="tag">Quantum</span>
+            </div>
+          </div>
         </div>
 
-        <div class="course-block">
-          <div class="course-term">Fall 2025</div>
-          <ul>
-            <li>Functional Analysis <em>(Reading Course)</em></li>
-            <li>Physics II — Electromagnetics &amp; Optics</li>
-          </ul>
+        <div class="course-card reveal">
+          <div class="course-card-img">
+            <img src="assets/courses/functional-analysis.jpg" alt="Functional Analysis"
+              onerror="imgFailCourse(this,'∞','Functional Analysis')" />
+          </div>
+          <div class="course-card-body">
+            <div class="course-term-badge">Fall 2025 &middot; Reading Course</div>
+            <h3>Functional Analysis</h3>
+            <p>Banach and Hilbert spaces, Hahn-Banach, Open Mapping, Riesz Representation, measure theory. Advisor: Dr.
+              Benjamin Civiletti.</p>
+            <div class="course-card-tags">
+              <span class="tag">Banach Spaces</span>
+              <span class="tag">Measure Theory</span>
+            </div>
+          </div>
         </div>
 
-        <div class="course-block">
-          <div class="course-term">Spring 2025 · Budapest</div>
-          <ul>
-            <li>Topology <em>(Reading Course)</em></li>
-            <li>Analysis</li>
-            <li>Deep Learning</li>
-            <li>Combinatorics</li>
-          </ul>
+        <div class="course-card reveal">
+          <div class="course-card-img">
+            <img src="assets/courses/physics-em.jpg" alt="Physics II — Electromagnetics"
+              onerror="imgFailCourse(this,'⚡','Electromagnetics')" />
+          </div>
+          <div class="course-card-body">
+            <div class="course-term-badge">Fall 2025 &middot; Augustana College</div>
+            <h3>Physics II — Electromagnetics &amp; Optics</h3>
+            <p>Static and Electromagnetics Field. Maxwell Equations, and Basic Wave Theory</p>
+            <div class="course-card-tags">
+              <span class="tag">Maxwell</span>
+              <span class="tag">Optics</span>
+            </div>
+          </div>
         </div>
 
-        <div class="course-block">
-          <div class="course-term">Fall 2024</div>
-          <ul>
-            <li>Inquiry-based Linear Algebra</li>
-          </ul>
+        <div class="course-card reveal">
+          <div class="course-card-img">
+            <img src="assets/courses/topology.jpg" alt="Topology" onerror="imgFailCourse(this,'⭕','Topology')" />
+          </div>
+          <div class="course-card-body">
+            <div class="course-term-badge">Spring 2025 &middot; Budapest</div>
+            <h3>Topology</h3>
+            <p>Introductory Topology. Classification of Surface. Homotopy. Fundamental Group.</p>
+            <div class="course-card-tags">
+              <span class="tag">Point Set</span>
+              <span class="tag">Geometric Topology</span>
+              <span class="tag">Algebraic Topology</span>
+            </div>
+          </div>
         </div>
 
-        <div class="course-block">
-          <div class="course-term">Fall 2023</div>
-          <ul>
-            <li>Non-linear Differential Equations <em>(Reading Course)</em></li>
-          </ul>
+        <div class="course-card reveal">
+          <div class="course-card-img">
+            <img src="assets/courses/analysis.jpg" alt="Analysis" onerror="imgFailCourse(this,'ε','Analysis')" />
+          </div>
+          <div class="course-card-body">
+            <div class="course-term-badge">Spring 2025 &middot; Budapest Semester</div>
+            <h3>Analysis</h3>
+            <p>Advanced real analysis in Budapest</p>
+            <div class="course-card-tags">
+              <span class="tag">Real Analysis</span>
+              <span class="tag">Budapest</span>
+            </div>
+          </div>
         </div>
+
+        <div class="course-card reveal">
+          <div class="course-card-img">
+            <img src="assets/courses/deep-learning.jpg" alt="Deep Learning"
+              onerror="imgFailCourse(this,'🧠','Deep Learning')" />
+          </div>
+          <div class="course-card-body">
+            <div class="course-term-badge">Spring 2025 &middot; Budapest Semester</div>
+            <h3>Deep Learning</h3>
+            <p>Neural networks and modern ML theory - studied in Hungary as part of the Budapest program.</p>
+            <div class="course-card-tags">
+              <span class="tag">Neural Networks</span>
+              <span class="tag">Basic Deep Learning</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card reveal">
+          <div class="course-card-img">
+            <img src="assets/courses/combinatorics.jpg" alt="Combinatorics"
+              onerror="imgFailCourse(this,'∑','Combinatorics')" />
+          </div>
+          <div class="course-card-body">
+            <div class="course-term-badge">Spring 2025 &middot; Budapest Semester</div>
+            <h3>Combinatorics</h3>
+            <p>Introductory Combinatorics. Graph Theory. Ramsey Theory.
+            </p>
+            <div class="course-card-tags">
+              <span class="tag">Graph Theory</span>
+              <span class="tag">Ramsey Theory</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card reveal">
+          <div class="course-card-img">
+            <img src="assets/courses/linear-algebra.jpg" alt="Linear Algebra"
+              onerror="imgFailCourse(this,'⬜','Linear Algebra')" />
+          </div>
+          <div class="course-card-body">
+            <div class="course-term-badge">Fall 2024 &middot; Augustana College</div>
+            <h3>Inquiry-Based Linear Algebra</h3>
+            <p>Proof-based linear algebra with an inquiry-driven approach — building every theorem from scratch.</p>
+            <div class="course-card-tags">
+              <span class="tag">IBL</span>
+              <span class="tag">Proof-Based</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- CV -->
-  <section id="cv" class="section section-alt">
+  <!-- ===== Quick links ===== -->
+  <section class="section">
     <div class="container">
-      <h2 class="section-title">Curriculum Vitae</h2>
-      <p class="section-sub">Education, skills, and presentations.</p>
-
-      <div class="cv-grid">
-        <!-- Education -->
-        <div class="cv-block">
-          <h3 class="cv-block-title">Education</h3>
-
-          <div class="cv-item">
-            <div class="cv-item-header">
-              <h4>Augustana College</h4>
-              <span>Feb 2023 – Present</span>
-            </div>
-            <p class="cv-item-sub">B.A. Mathematics &amp; Computer Science · Rock Island, IL</p>
-            <p>GPA: 3.8 / 4.0 · Dean's List · Pi Mu Epsilon</p>
-          </div>
-
-          <div class="cv-item">
-            <div class="cv-item-header">
-              <h4>Budapest Semester in Mathematics</h4>
-              <span>Jan – May 2025</span>
-            </div>
-            <p class="cv-item-sub">Exchange semester · Budapest, Hungary</p>
-            <p>Advanced mathematics coursework in topology, analysis, combinatorics, and deep learning.</p>
-          </div>
-
-          <div class="cv-item">
-            <div class="cv-item-header">
-              <h4>University of Maryland</h4>
-              <span>Fall 2026</span>
-            </div>
-            <p class="cv-item-sub">PhD, Applied Mathematics, Statistics &amp; Scientific Computation (AMSC)</p>
-            <p>Incoming PhD student.</p>
-          </div>
-        </div>
-
-        <!-- Skills -->
-        <div class="cv-block">
-          <h3 class="cv-block-title">Skills</h3>
-
-          <div class="skill-group">
-            <h4>Programming</h4>
-            <div class="skill-tags">
-              <span>Python</span><span>Java</span><span>C++</span><span>MATLAB</span><span>R</span>
-              <span>SciPy</span><span>NumPy</span><span>Matplotlib</span><span>PyTorch</span><span>FEniCS</span>
-            </div>
-          </div>
-
-          <div class="skill-group">
-            <h4>Numerical Methods</h4>
-            <div class="skill-tags">
-              <span>FEM</span><span>FDTD</span><span>FDFD</span><span>RCWA</span><span>FFT</span>
-            </div>
-          </div>
-
-          <div class="skill-group">
-            <h4>Languages</h4>
-            <div class="skill-tags">
-              <span>Vietnamese — Fluent</span><span>English — Fluent</span><span>German — Beginner</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Presentations -->
-        <div class="cv-block">
-          <h3 class="cv-block-title">Presentations</h3>
-          <ul class="pres-list">
-            <li>
-              <span class="pres-year">2024</span>
-              <span>Coordinate Transform Method for Solving Maxwell's Equations</span>
-            </li>
-            <li>
-              <span class="pres-year">2024</span>
-              <span>Interactive Workshop on Maxwell's Equations Solver</span>
-            </li>
-            <li>
-              <span class="pres-year">2023</span>
-              <span>Pursuit Curve for Accelerating Target</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="cv-download">
-        <a href="assets/cv.pdf" class="btn-primary" target="_blank">Download Full CV (PDF)</a>
+      <h2 class="section-title">More About Me</h2>
+      <p class="section-sub"></p>
+      <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:8px;">
+        <a href="thoughts.html" class="btn btn-ghost">Thoughts &amp; Resources</a>
+        <!-- <a href="ta.html" class="btn btn-ghost">Teaching &amp; SI Handouts</a> -->
+        <a href="leadership.html" class="btn btn-ghost">Leadership</a>
+        <a href="travel.html" class="btn btn-ghost">Travel</a>
+        <a href="cv.html" class="btn btn-primary">Full CV</a>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container contact-container">
-      <h2 class="section-title">Get in Touch</h2>
-      <p class="section-sub">Whether it's a research question, collaboration, or just to say hello.</p>
-
-      <div class="contact-cards">
-        <a href="mailto:hoangtrieuhuynh22@augustana.edu" class="contact-card">
-          <div class="contact-icon">&#x2709;</div>
-          <div>
-            <div class="contact-label">Email</div>
-            <div class="contact-value">hoangtrieuhuynh22@augustana.edu</div>
-          </div>
-        </a>
-
-        <a href="https://www.linkedin.com/in/hoangtrieu1905/" target="_blank" rel="noopener" class="contact-card">
-          <div class="contact-icon">&#x1F517;</div>
-          <div>
-            <div class="contact-label">LinkedIn</div>
-            <div class="contact-value">linkedin.com/in/hoangtrieu1905</div>
-          </div>
-        </a>
-
-        <a href="https://github.com/hoangtrieu1905" target="_blank" rel="noopener" class="contact-card">
-          <div class="contact-icon">&#x1F4BB;</div>
-          <div>
-            <div class="contact-label">GitHub</div>
-            <div class="contact-value">github.com/hoangtrieu1905</div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2026 Hoang Trieu · Built with HTML &amp; CSS</p>
+      <p>&copy; 2026 Hoang Trieu &nbsp;&middot;&nbsp;
+        <a href="mailto:hmtrieu@umd.edu">hmtrieu@umd.edu</a> &nbsp;&middot;&nbsp;
+        <a href="https://www.linkedin.com/in/hoangtrieu1905/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>

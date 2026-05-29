@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thoughts — Hoang Trieu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..600;1,400..600&family=Plus+Jakarta+Sans:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">Hoang Trieu</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="thoughts.html">Thoughts</a></li>
+        <!-- <li><a href="ta.html">TA</a></li> -->
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="leadership.html">Leadership</a></li>
+        <li><a href="travel.html">Travel</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container-text">
+      <p class="page-hero-eyebrow">Thoughts</p>
+      <h1>Things I'm Reading,<br />Watching, and Thinking About</h1>
+      <p>A list of resources, links, and small reflections — things I actually use or think about recently.</p>
+    </div>
+  </div>
+
+  <div class="thoughts-section">
+    <div class="container-text">
+
+      <!--
+      HOW TO ADD MORE ENTRIES
+      ───────────────────────
+      Each section has:
+        1. "pinned" entries — always visible (the first 2)
+        2. "overflow" entries — hidden behind "View more"
+
+      To add more entries that show by default, add .thought-entry divs
+      BEFORE the <div class="thoughts-overflow">.
+
+      To add entries that start hidden (behind "View more"),
+      add .thought-entry divs INSIDE the <div class="thoughts-overflow">.
+
+      The JS automatically counts and updates the button label.
+    -->
+
+      <!-- ===== Websites ===== -->
+      <div class="thoughts-category reveal" data-category>
+        <div class="thoughts-category-header">
+          <h2 class="thoughts-category-title">Websites</h2>
+        </div>
+        <p class="thoughts-category-sub">Tools that are useful to me. Click on each card to view more.</p>
+
+        <!-- Always visible -->
+        <div class="resource-grid" style="margin-bottom:0;">
+          <a href="https://brainscale.net/app/dual-n-back/training" target="_blank" rel="noopener noreferrer"
+            class="resource-card">
+            <h3>Dual N-Back Training</h3>
+            <p>A cognitive exercise platform for working memory training.</p>
+            <span class="rc-tag">Tool</span>
+          </a>
+
+          <a href="https://app.litmaps.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <h3>Litmap</h3>
+            <p>Visualizes connections between scientific papers.</p>
+            <span class="rc-tag">Research Tool</span>
+          </a>
+
+          <a href="https://benpomeranz.substack.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <h3>Ben's P Substack</h3>
+            <p>A blog by a friend I met in Hungary. Worth reading.</p>
+            <span class="rc-tag">Blog</span>
+          </a>
+        </div>
+
+        <!-- Hidden behind "View more" -->
+        <div class="thoughts-overflow collapsed" data-overflow>
+          <div class="resource-grid" style="margin-top:20px;">
+            <!-- Add future extra resources here -->
+          </div>
+        </div>
+
+        <div class="thoughts-viewmore-wrap">
+          <button class="thoughts-viewmore-btn" data-viewmore>
+            View more <span class="thoughts-viewmore-count" data-count></span>
+            <span class="vmb-arrow">▼</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ===== Maths ===== -->
+      <div class="thoughts-category reveal" data-category>
+        <div class="thoughts-category-header">
+          <h2 class="thoughts-category-title">Maths</h2>
+        </div>
+        <p class="thoughts-category-sub">Reflections on doing mathematics, learning it, and talking about it.</p>
+
+        <!-- Always visible: first 2 entries -->
+        <div class="thought-entry">
+          <div class="thought-date">May 1<br />2026</div>
+          <div class="thought-body">
+            <h3>How to Write a Research Paper</h3>
+            <p>Watched <a href="https://www.youtube.com/watch?v=UY7sVKJPTMA" target="_blank"
+                rel="noopener noreferrer">Professor Carr's video</a> (University of Minnesota Chemistry) on writing
+              research papers.</p>
+          </div>
+        </div>
+
+        <div class="thought-entry">
+          <div class="thought-date">Apr 12<br />2026</div>
+          <div class="thought-body">
+            <h3>Attention Spans and Elevator Pitches</h3>
+            <p>People's attention span of this new age is shorten significantly, and I think we must adapt to this fact.
+              In the past few days, I have met tons of people for coffee chats about grad school and realized that I
+              need a better way to introduce myself. <a href="https://www.youtube.com/watch?v=f_N3PGvnVKg"
+                target="_blank" rel="noopener noreferrer">This video</a> is interesting - I'm not totally convinced, but
+              it
+              offers some good frameworks for an evelator pitch.</p>
+          </div>
+        </div>
+
+        <!-- Hidden entries -->
+        <div class="thoughts-overflow collapsed" data-overflow>
+          <div class="thought-entry" style="margin-top:32px;">
+            <div class="thought-date">Apr 5<br />2026</div>
+            <div class="thought-body">
+              <h3>The Paper Publication Process</h3>
+              <p>I am trying to see how other people do Math research, especially in a traditional way (considering the
+                very AI time we are living in). This is a <a href="https://www.youtube.com/watch?v=yckPYJgjXeY&t=2s"
+                  target="_blank" rel="noopener noreferrer">cool video</a> from Chris Staecker, which basically is a
+                digital
+                vlog of himself on major steps of publising a paper. Check it out</p>
+            </div>
+          </div>
+
+          <div class="thought-entry">
+            <div class="thought-date">Apr 4<br />2026</div>
+            <div class="thought-body">
+              <h3>AI's Broader Impacts</h3>
+              <p> I met with Hongyi and Lucas in Philly, and we were discussing how AI can go further than just taking
+                our jobs. Hongyi suggested <a href="https://ai-2027.com/" target="_blank" rel="noopener noreferrer">a
+                  site</a> to read more about AI prediction. I did not finish reading this report
+                because it is long and depressing, but I figure I would just put it here in case you might be interest
+                in it. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="thoughts-viewmore-wrap">
+          <button class="thoughts-viewmore-btn" data-viewmore>
+            View more <span class="thoughts-viewmore-count" data-count></span>
+            <span class="vmb-arrow">▼</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ===== AI ===== -->
+      <div class="thoughts-category reveal" data-category>
+        <div class="thoughts-category-header">
+          <h2 class="thoughts-category-title">AI</h2>
+        </div>
+        <p class="thoughts-category-sub">How AI is changing how I work, think, and do research.</p>
+
+        <!-- Always visible -->
+        <div class="thought-entry">
+          <div class="thought-date">Apr 19<br />2026</div>
+          <div class="thought-body">
+            <h3>AI Orchestration for Workflows</h3>
+            <p><a href="https://github.com/ryan2625/State-of-AI" target="_blank" rel="noopener noreferrer">Ryan's
+                repo</a> on how to "optimize" workflow using AI Ochestrator.</p>
+          </div>
+        </div>
+
+        <!-- Hidden entries — add future AI thoughts here -->
+        <div class="thoughts-overflow collapsed" data-overflow>
+          <!-- Add more AI entries here as you accumulate them -->
+        </div>
+
+        <div class="thoughts-viewmore-wrap">
+          <button class="thoughts-viewmore-btn" data-viewmore>
+            View more <span class="thoughts-viewmore-count" data-count></span>
+            <span class="vmb-arrow">▼</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Hoang Trieu &nbsp;&middot;&nbsp;
+        <a href="mailto:hmtrieu@umd.edu">hmtrieu@umd.edu</a> &nbsp;&middot;&nbsp;
+        <a href="https://www.linkedin.com/in/hoangtrieu1905/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

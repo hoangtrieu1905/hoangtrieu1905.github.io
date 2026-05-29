@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel — Hoang Trieu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..600;1,400..600&family=Plus+Jakarta+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Hoang Trieu</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="thoughts.html">Thoughts</a></li>
+      <!-- <li><a href="ta.html">TA</a></li> -->
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="leadership.html">Leadership</a></li>
+      <li><a href="travel.html">Travel</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container-text">
+    <p class="page-hero-eyebrow">Travel</p>
+    <h1>Places That Have<br/>Shaped Me</h1>
+    <p>Every place leaves something behind — a different way of thinking about people, food, mathematics, or just what a good afternoon looks like.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="travel-intro reveal">
+      <span class="badge">11 countries</span>
+      <span class="badge badge-warm">Across 4 continents</span>
+      <span class="badge">More incoming</span>
+    </div>
+
+    <!--
+      HOW TO ADD PHOTOS
+      ─────────────────
+      Each country has a gallery with slots like:
+        assets/travel/vietnam-1.jpg
+        assets/travel/vietnam-2.jpg  ...etc
+      To add more photos, copy a <div class="gallery-slide"> block
+      inside the .gallery-track and update the src.
+      The gallery scrolls automatically — add as many as you like.
+    -->
+
+    <!-- Vietnam -->
+    <div class="country-section reveal">
+      <div class="country-header">
+        <span class="country-flag">🇻🇳</span>
+        <h2>Vietnam</h2>
+        <span class="country-label">Born and Raised</span>
+      </div>
+      <div class="gallery-wrap">
+        <button class="gallery-arrow prev" aria-label="Previous">&#8592;</button>
+        <div class="gallery-track" id="gallery-vn">
+          <div class="gallery-slide"><img src="assets/travel/vietnam-1.jpg" alt="Vietnam 1" onerror="imgFailTravel(this,'🇻🇳')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/vietnam-2.jpg" alt="Vietnam 2" onerror="imgFailTravel(this,'🇻🇳')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/vietnam-3.jpg" alt="Vietnam 3" onerror="imgFailTravel(this,'🇻🇳')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/vietnam-4.jpg" alt="Vietnam 4" onerror="imgFailTravel(this,'🇻🇳')" /></div>
+        </div>
+        <button class="gallery-arrow next" aria-label="Next">&#8594;</button>
+        <div class="gallery-dots"></div>
+      </div>
+      <p class="country-story">Where everything started. The food, the people, the pace of life — everything I compare new places to. Coming back always resets something in me that I didn't know had drifted.</p>
+    </div>
+
+    <!-- United States -->
+    <div class="country-section reveal">
+      <div class="country-header">
+        <span class="country-flag">🇺🇸</span>
+        <h2>United States</h2>
+        <span class="country-label">Home Away from Home</span>
+      </div>
+      <div class="gallery-wrap">
+        <button class="gallery-arrow prev" aria-label="Previous">&#8592;</button>
+        <div class="gallery-track" id="gallery-us">
+          <div class="gallery-slide"><img src="assets/travel/usa-1.jpg" alt="USA 1" onerror="imgFailTravel(this,'🇺🇸')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/usa-2.jpg" alt="USA 2" onerror="imgFailTravel(this,'🇺🇸')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/usa-3.jpg" alt="USA 3" onerror="imgFailTravel(this,'🇺🇸')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/usa-4.jpg" alt="USA 4" onerror="imgFailTravel(this,'🇺🇸')" /></div>
+        </div>
+        <button class="gallery-arrow next" aria-label="Next">&#8594;</button>
+        <div class="gallery-dots"></div>
+      </div>
+      <p class="country-story">Augustana College in Rock Island, IL — the town where I grew as a mathematician, teacher, and person. Illinois winters included. The Mississippi River is bigger than it looks on a map.</p>
+    </div>
+
+    <!-- Hungary -->
+    <div class="country-section reveal">
+      <div class="country-header">
+        <span class="country-flag">🇭🇺</span>
+        <h2>Hungary</h2>
+        <span class="country-label">Budapest Semester · Spring 2025</span>
+      </div>
+      <div class="gallery-wrap">
+        <button class="gallery-arrow prev" aria-label="Previous">&#8592;</button>
+        <div class="gallery-track" id="gallery-hu">
+          <div class="gallery-slide"><img src="assets/travel/hungary-1.jpg" alt="Hungary 1" onerror="imgFailTravel(this,'🇭🇺')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/hungary-2.jpg" alt="Hungary 2" onerror="imgFailTravel(this,'🇭🇺')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/hungary-3.jpg" alt="Hungary 3" onerror="imgFailTravel(this,'🇭🇺')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/hungary-4.jpg" alt="Hungary 4" onerror="imgFailTravel(this,'🇭🇺')" /></div>
+        </div>
+        <button class="gallery-arrow next" aria-label="Next">&#8594;</button>
+        <div class="gallery-dots"></div>
+      </div>
+      <p class="country-story">The Budapest Semester in Mathematics changed how I think about math. The city itself is stunning — the Parliament by the Danube at night, the ruin bars in the 7th district. But it's the problems and the people you solve them with that stay with you.</p>
+    </div>
+
+    <!-- Austria -->
+    <div class="country-section reveal">
+      <div class="country-header">
+        <span class="country-flag">🇦🇹</span>
+        <h2>Austria</h2>
+        <span class="country-label">Day Trip from Budapest</span>
+      </div>
+      <div class="gallery-wrap">
+        <button class="gallery-arrow prev" aria-label="Previous">&#8592;</button>
+        <div class="gallery-track" id="gallery-at">
+          <div class="gallery-slide"><img src="assets/travel/austria-1.jpg" alt="Austria 1" onerror="imgFailTravel(this,'🇦🇹')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/austria-2.jpg" alt="Austria 2" onerror="imgFailTravel(this,'🇦🇹')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/austria-3.jpg" alt="Austria 3" onerror="imgFailTravel(this,'🇦🇹')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/austria-4.jpg" alt="Austria 4" onerror="imgFailTravel(this,'🇦🇹')" /></div>
+        </div>
+        <button class="gallery-arrow next" aria-label="Next">&#8594;</button>
+        <div class="gallery-dots"></div>
+      </div>
+      <p class="country-story">Vienna in a day — Schönbrunn Palace, too much coffee, and the realization that the Viennese take dessert very seriously. The Kunsthistorisches Museum was worth every minute.</p>
+    </div>
+
+    <!-- Slovakia -->
+    <div class="country-section reveal">
+      <div class="country-header">
+        <span class="country-flag">🇸🇰</span>
+        <h2>Slovakia</h2>
+        <span class="country-label">Weekend Trip</span>
+      </div>
+      <div class="gallery-wrap">
+        <button class="gallery-arrow prev" aria-label="Previous">&#8592;</button>
+        <div class="gallery-track" id="gallery-sk">
+          <div class="gallery-slide"><img src="assets/travel/slovakia-1.jpg" alt="Slovakia 1" onerror="imgFailTravel(this,'🇸🇰')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/slovakia-2.jpg" alt="Slovakia 2" onerror="imgFailTravel(this,'🇸🇰')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/slovakia-3.jpg" alt="Slovakia 3" onerror="imgFailTravel(this,'🇸🇰')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/slovakia-4.jpg" alt="Slovakia 4" onerror="imgFailTravel(this,'🇸🇰')" /></div>
+        </div>
+        <button class="gallery-arrow next" aria-label="Next">&#8594;</button>
+        <div class="gallery-dots"></div>
+      </div>
+      <p class="country-story">Bratislava is one of those cities that feels overlooked — which means you have it mostly to yourself. The old town at dusk is genuinely lovely. Cross the border from Budapest and you're there in two hours.</p>
+    </div>
+
+    <!-- Germany -->
+    <div class="country-section reveal">
+      <div class="country-header">
+        <span class="country-flag">🇩🇪</span>
+        <h2>Germany</h2>
+        <span class="country-label">Weekend Trip</span>
+      </div>
+      <div class="gallery-wrap">
+        <button class="gallery-arrow prev" aria-label="Previous">&#8592;</button>
+        <div class="gallery-track" id="gallery-de">
+          <div class="gallery-slide"><img src="assets/travel/germany-1.jpg" alt="Germany 1" onerror="imgFailTravel(this,'🇩🇪')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/germany-2.jpg" alt="Germany 2" onerror="imgFailTravel(this,'🇩🇪')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/germany-3.jpg" alt="Germany 3" onerror="imgFailTravel(this,'🇩🇪')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/germany-4.jpg" alt="Germany 4" onerror="imgFailTravel(this,'🇩🇪')" /></div>
+        </div>
+        <button class="gallery-arrow next" aria-label="Next">&#8594;</button>
+        <div class="gallery-dots"></div>
+      </div>
+      <p class="country-story">The country where I started learning German. Berlin's energy is unlike anywhere else — messy, creative, constantly rebuilding itself. The East Side Gallery is a reminder of how recently everything changed.</p>
+    </div>
+
+    <!-- Belgium -->
+    <div class="country-section reveal">
+      <div class="country-header">
+        <span class="country-flag">🇧🇪</span>
+        <h2>Belgium</h2>
+        <span class="country-label">Weekend Trip</span>
+      </div>
+      <div class="gallery-wrap">
+        <button class="gallery-arrow prev" aria-label="Previous">&#8592;</button>
+        <div class="gallery-track" id="gallery-be">
+          <div class="gallery-slide"><img src="assets/travel/belgium-1.jpg" alt="Belgium 1" onerror="imgFailTravel(this,'🇧🇪')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/belgium-2.jpg" alt="Belgium 2" onerror="imgFailTravel(this,'🇧🇪')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/belgium-3.jpg" alt="Belgium 3" onerror="imgFailTravel(this,'🇧🇪')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/belgium-4.jpg" alt="Belgium 4" onerror="imgFailTravel(this,'🇧🇪')" /></div>
+        </div>
+        <button class="gallery-arrow next" aria-label="Next">&#8594;</button>
+        <div class="gallery-dots"></div>
+      </div>
+      <p class="country-story">Brussels and Bruges. Belgian waffles are not a myth. The medieval canal system in Bruges felt like stepping into a painting. The art museums were an unexpected highlight.</p>
+    </div>
+
+    <!-- Netherlands -->
+    <div class="country-section reveal">
+      <div class="country-header">
+        <span class="country-flag">🇳🇱</span>
+        <h2>The Netherlands</h2>
+        <span class="country-label">Weekend Trip</span>
+      </div>
+      <div class="gallery-wrap">
+        <button class="gallery-arrow prev" aria-label="Previous">&#8592;</button>
+        <div class="gallery-track" id="gallery-nl">
+          <div class="gallery-slide"><img src="assets/travel/netherlands-1.jpg" alt="Netherlands 1" onerror="imgFailTravel(this,'🇳🇱')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/netherlands-2.jpg" alt="Netherlands 2" onerror="imgFailTravel(this,'🇳🇱')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/netherlands-3.jpg" alt="Netherlands 3" onerror="imgFailTravel(this,'🇳🇱')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/netherlands-4.jpg" alt="Netherlands 4" onerror="imgFailTravel(this,'🇳🇱')" /></div>
+        </div>
+        <button class="gallery-arrow next" aria-label="Next">&#8594;</button>
+        <div class="gallery-dots"></div>
+      </div>
+      <p class="country-story">Amsterdam is everything you've heard, and the canal system is genuinely impressive once you realize it was all engineered. Time it right and the tulip fields are in bloom. Rijksmuseum is worth the full day.</p>
+    </div>
+
+    <!-- Slovenia -->
+    <div class="country-section reveal">
+      <div class="country-header">
+        <span class="country-flag">🇸🇮</span>
+        <h2>Slovenia</h2>
+        <span class="country-label">Weekend Trip</span>
+      </div>
+      <div class="gallery-wrap">
+        <button class="gallery-arrow prev" aria-label="Previous">&#8592;</button>
+        <div class="gallery-track" id="gallery-si">
+          <div class="gallery-slide"><img src="assets/travel/slovenia-1.jpg" alt="Slovenia 1" onerror="imgFailTravel(this,'🇸🇮')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/slovenia-2.jpg" alt="Slovenia 2" onerror="imgFailTravel(this,'🇸🇮')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/slovenia-3.jpg" alt="Slovenia 3" onerror="imgFailTravel(this,'🇸🇮')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/slovenia-4.jpg" alt="Slovenia 4" onerror="imgFailTravel(this,'🇸🇮')" /></div>
+        </div>
+        <button class="gallery-arrow next" aria-label="Next">&#8594;</button>
+        <div class="gallery-dots"></div>
+      </div>
+      <p class="country-story">Lake Bled is not overrated. Ljubljana is a small capital that feels like it has figured something out that bigger cities haven't — walkable, green, genuinely pleasant. My favorite discovery from the Budapest semester trips.</p>
+    </div>
+
+    <!-- Italy -->
+    <div class="country-section reveal">
+      <div class="country-header">
+        <span class="country-flag">🇮🇹</span>
+        <h2>Italy</h2>
+        <span class="country-label">Weekend Trip</span>
+      </div>
+      <div class="gallery-wrap">
+        <button class="gallery-arrow prev" aria-label="Previous">&#8592;</button>
+        <div class="gallery-track" id="gallery-it">
+          <div class="gallery-slide"><img src="assets/travel/italy-1.jpg" alt="Italy 1" onerror="imgFailTravel(this,'🇮🇹')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/italy-2.jpg" alt="Italy 2" onerror="imgFailTravel(this,'🇮🇹')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/italy-3.jpg" alt="Italy 3" onerror="imgFailTravel(this,'🇮🇹')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/italy-4.jpg" alt="Italy 4" onerror="imgFailTravel(this,'🇮🇹')" /></div>
+        </div>
+        <button class="gallery-arrow next" aria-label="Next">&#8594;</button>
+        <div class="gallery-dots"></div>
+      </div>
+      <p class="country-story">Rome, Florence, or Venice — each deserves more time than a weekend. The food alone is reason enough to come back. Standing in the Pantheon, a 2000-year-old unreinforced concrete dome, is genuinely humbling.</p>
+    </div>
+
+    <!-- Greece -->
+    <div class="country-section reveal">
+      <div class="country-header">
+        <span class="country-flag">🇬🇷</span>
+        <h2>Greece</h2>
+        <span class="country-label">Weekend Trip</span>
+      </div>
+      <div class="gallery-wrap">
+        <button class="gallery-arrow prev" aria-label="Previous">&#8592;</button>
+        <div class="gallery-track" id="gallery-gr">
+          <div class="gallery-slide"><img src="assets/travel/greece-1.jpg" alt="Greece 1" onerror="imgFailTravel(this,'🇬🇷')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/greece-2.jpg" alt="Greece 2" onerror="imgFailTravel(this,'🇬🇷')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/greece-3.jpg" alt="Greece 3" onerror="imgFailTravel(this,'🇬🇷')" /></div>
+          <div class="gallery-slide"><img src="assets/travel/greece-4.jpg" alt="Greece 4" onerror="imgFailTravel(this,'🇬🇷')" /></div>
+        </div>
+        <button class="gallery-arrow next" aria-label="Next">&#8594;</button>
+        <div class="gallery-dots"></div>
+      </div>
+      <p class="country-story">Athens and the Acropolis. Standing in the same city where mathematics was formalized thousands of years ago makes you feel both very small and very lucky. The souvlaki was also excellent.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Hoang Trieu &nbsp;&middot;&nbsp;
+       <a href="mailto:hmtrieu@umd.edu">hmtrieu@umd.edu</a> &nbsp;&middot;&nbsp;
+       <a href="https://www.linkedin.com/in/hoangtrieu1905/" target="_blank" rel="noopener">LinkedIn</a> &nbsp;&middot;&nbsp;
+       <a href="https://www.strava.com/" target="_blank" rel="noopener">Strava</a>
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
