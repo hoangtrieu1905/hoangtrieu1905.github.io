@@ -442,6 +442,7 @@ sup {
   gap: 14px;
   max-width: 360px;
   width: 100%;
+  margin: 0 auto;
 }
 
 .hero-photo {
@@ -468,20 +469,12 @@ sup {
 }
 
 .hero-photo-caption {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   font-size: .72rem;
   color: var(--text-muted);
-  padding: 0 4px;
-  line-height: 1.4;
-}
-
-.hero-photo-caption .cap-dot {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--accent);
+  padding: 6px 8px;
+  line-height: 1.5;
+  border-left: 2px solid var(--accent);
+  margin-left: 2px;
 }
 
 .hero-text {
@@ -543,7 +536,7 @@ sup {
   color: var(--text-muted);
   margin-bottom: 10px;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 8px;
   line-height: 1.5;
 }
@@ -551,15 +544,19 @@ sup {
 .hero-status-item strong {
   color: var(--text);
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .hero-status-item::before {
   content: "";
+  flex-shrink: 0;
   width: 4px;
   height: 4px;
   border-radius: 50%;
   background: var(--warm);
   opacity: 0.7;
+  position: relative;
+  top: -1px;
 }
 
 .hero-tags {
@@ -1725,14 +1722,12 @@ footer a:hover {
   }
 
   .hero-photo-caption {
-    justify-content: center;
-    display: block;
     text-align: center;
     line-height: 1.5;
-  }
-
-  .hero-photo-caption .cap-dot {
-    display: none;
+    border-left: none;
+    border-top: 2px solid var(--accent);
+    padding: 6px 4px;
+    margin-left: 0;
   }
 
   .hero-text {
@@ -1740,25 +1735,26 @@ footer a:hover {
   }
 
   .hero-status-list {
-    display: block;
     max-width: 100%;
     margin: 0 auto 32px auto;
     text-align: left;
-    padding: 0 16px;
+    padding: 0 4px;
   }
 
   .hero-status-item {
-    display: block;
-    position: relative;
-    padding-left: 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
     margin-bottom: 12px;
     line-height: 1.6;
+    padding-left: 0;
   }
 
   .hero-status-item::before {
-    position: absolute;
-    left: 0;
-    top: 10px;
+    position: static;
+    flex-shrink: 0;
+    top: auto;
+    left: auto;
     margin: 0;
   }
 
