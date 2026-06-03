@@ -191,6 +191,64 @@ sup {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* ===== Announcement Banner ===== */
+.announcement-banner {
+  margin-top: var(--nav-h);
+  background: linear-gradient(90deg, var(--accent-pale) 0%, var(--warm-pale) 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 24px;
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  line-height: 1.4;
+  animation: slideDown 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.announcement-banner + .hero {
+  padding-top: 15px;
+}
+
+.announcement-banner a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.announcement-banner a:hover {
+  color: var(--accent-mid);
+}
+
+.announcement-banner .banner-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* ===== Shared Layout ===== */
 .container {
   max-width: var(--max);
@@ -2271,6 +2329,34 @@ footer a:hover {
   line-height: 1.65;
   margin-bottom: 24px;
   flex-grow: 1;
+}
+
+.card-questions-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-questions-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.card-questions-list li::before {
+  content: "?";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--warm);
+  font-weight: 600;
+  font-family: var(--sans);
 }
 
 .resources-card-links {
