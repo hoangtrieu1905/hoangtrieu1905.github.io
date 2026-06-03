@@ -2503,4 +2503,294 @@ footer a:hover {
 .blog-parent-links a:hover {
   color: var(--accent);
   text-decoration: underline;
+}
+
+/* ===== Custom Wide Timeline for Detailed chronological pages ===== */
+@media (min-width: 641px) {
+  .timeline-wide {
+    padding-left: 200px;
+  }
+  .timeline-wide::before {
+    left: 160px;
+  }
+  .timeline-wide .tl-year {
+    width: 140px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    padding-top: 6px;
+  }
+}
+
+.tl-year-sub {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+.tl-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+
+.tl-card-deadline {
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 600;
+  font-family: var(--sans);
+}
+
+/* ===== Request for Recommendation Document Package Styles ===== */
+.doc-packet-container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  margin: 36px 0;
+  overflow: hidden;
+}
+
+.doc-packet-header {
+  background: var(--surface-alt);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 28px;
+}
+
+.doc-packet-header h3 {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.doc-packet-body {
+  padding: 32px 36px;
+}
+
+@media (max-width: 640px) {
+  .doc-packet-body {
+    padding: 20px 24px;
+  }
+}
+
+.doc-section {
+  margin-bottom: 28px;
+  border-bottom: 1px dashed var(--border);
+  padding-bottom: 24px;
+}
+
+.doc-section:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.doc-section h4 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--warm);
+  margin-bottom: 12px;
+}
+
+.doc-fields, .doc-questions {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.doc-fields li {
+  margin-bottom: 12px;
+  list-style-type: none !important;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.doc-questions li {
+  margin-bottom: 16px;
+  list-style-type: none !important;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  padding-left: 16px;
+  border-left: 2px solid var(--accent-pale);
+}
+
+/* ===== Coursework List Styles for Personal Background Page ===== */
+.course-list {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 24px 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.course-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.92rem;
+  transition: background 0.2s ease;
+}
+
+.course-list li:hover {
+  background: var(--warm-pale);
+}
+
+.course-list li:last-child {
+  border-bottom: none;
+}
+
+.course-term {
+  font-weight: 600;
+  color: var(--warm);
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.course-name {
+  flex-grow: 1;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.course-grade {
+  font-weight: 600;
+  color: var(--accent);
+  text-align: right;
+  flex-shrink: 0;
+  background: var(--accent-pale);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 640px) {
+  .course-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 14px 16px;
+  }
+  .course-term {
+    width: auto;
+  }
+  .course-grade {
+    text-align: left;
+  }
+}
+
+/* ===== Waitlist Progression Layouts (Chapter 9) ===== */
+.waitlist-group {
+  margin: 36px 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.waitlist-group-header {
+  background: var(--surface-alt);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 24px;
+}
+
+.waitlist-group-header h3 {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.waitlist-tables-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 24px;
+}
+
+@media (min-width: 900px) {
+  .waitlist-tables-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.waitlist-table-wrap {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  padding: 20px;
+}
+
+.waitlist-table-wrap h4 {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--warm);
+  margin-bottom: 16px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.waitlist-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.waitlist-table th,
+.waitlist-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.waitlist-table th {
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(var(--warm-rgb), 0.04);
+}
+
+.waitlist-table tr:last-child td {
+  border-bottom: none;
+}
+
+.waitlist-table td strong {
+  color: var(--accent);
+}
+
+.blog-signature {
+  margin-top: 48px;
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-family: var(--serif);
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.blog-signature strong {
+  font-style: normal;
+  color: var(--text);
 }
