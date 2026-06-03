@@ -1926,7 +1926,8 @@ footer a:hover {
 .dropdown-menu a.active {
   color: var(--accent);
   background: var(--accent-pale);
-  padding-left: 22px; /* Smooth sliding text reveal */
+  padding-left: 22px;
+  /* Smooth sliding text reveal */
 }
 
 /* Second-Level Sub-Dropdown Container (PhD Application Tips Submenu) */
@@ -1936,10 +1937,12 @@ footer a:hover {
 
 .submenu-menu {
   position: absolute;
-  top: -8px; /* Align with top of first item */
+  top: -8px;
+  /* Align with top of first item */
   left: auto;
   right: 100%;
-  z-index: 1000; /* Prevent transparency bleeding */
+  z-index: 1000;
+  /* Prevent transparency bleeding */
   display: block;
   min-width: 260px;
   background: var(--surface);
@@ -1947,10 +1950,12 @@ footer a:hover {
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-lg);
   padding: 8px 0;
-  margin-right: -2px; /* Smooth hover bridge overlap (left side) */
+  margin-right: -2px;
+  /* Smooth hover bridge overlap (left side) */
   opacity: 0;
   visibility: hidden;
-  transform: translateX(-10px); /* Slide from left */
+  transform: translateX(-10px);
+  /* Slide from left */
   transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
 }
 
@@ -1974,15 +1979,16 @@ footer a:hover {
 
 /* Desktop Hover Triggers & Interactive Bridge */
 @media (min-width: 641px) {
+
   /* Reveal first dropdown level */
-  .nav-dropdown:hover > .dropdown-menu {
+  .nav-dropdown:hover>.dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
 
   /* Reveal second dropdown level */
-  .nav-submenu:hover > .submenu-menu {
+  .nav-submenu:hover>.submenu-menu {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
@@ -2008,9 +2014,9 @@ footer a:hover {
     height: 100%;
     background: transparent;
   }
-  
+
   /* Styling helper for main nav item wrapper on desktop */
-  .nav-links > li > .nav-link-wrap {
+  .nav-links>li>.nav-link-wrap {
     display: inline-flex;
     align-items: center;
     padding: 6px 14px;
@@ -2020,28 +2026,28 @@ footer a:hover {
     gap: 4px;
   }
 
-  .nav-links > li > .nav-link-wrap a {
+  .nav-links>li>.nav-link-wrap a {
     padding: 0 !important;
     background: transparent !important;
     color: inherit !important;
   }
 
   /* Hover highlights the entire wrapper (including chevron) on desktop */
-  .nav-links > li > .nav-link-wrap:hover,
-  .nav-links > li.nav-dropdown:hover > .nav-link-wrap,
-  .nav-links > li > .nav-link-wrap.active {
+  .nav-links>li>.nav-link-wrap:hover,
+  .nav-links>li.nav-dropdown:hover>.nav-link-wrap,
+  .nav-links>li>.nav-link-wrap.active {
     color: var(--accent);
     background: var(--accent-pale);
   }
-  
+
   /* Highlight parent wrapper if child is active */
-  .nav-links > li.nav-dropdown:has(.active) > .nav-link-wrap {
+  .nav-links>li.nav-dropdown:has(.active)>.nav-link-wrap {
     color: var(--accent);
     background: var(--accent-pale);
   }
 
   /* Dropdown sub-menu item wrapper ("PhD Application Tips") on desktop */
-  .dropdown-menu .nav-submenu > .nav-link-wrap {
+  .dropdown-menu .nav-submenu>.nav-link-wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2053,17 +2059,18 @@ footer a:hover {
     cursor: pointer;
   }
 
-  .dropdown-menu .nav-submenu > .nav-link-wrap a {
+  .dropdown-menu .nav-submenu>.nav-link-wrap a {
     padding: 0 !important;
     background: transparent !important;
     color: inherit !important;
   }
 
-  .dropdown-menu .nav-submenu > .nav-link-wrap:hover,
-  .dropdown-menu .nav-submenu:hover > .nav-link-wrap {
+  .dropdown-menu .nav-submenu>.nav-link-wrap:hover,
+  .dropdown-menu .nav-submenu:hover>.nav-link-wrap {
     color: var(--accent);
     background: var(--accent-pale);
-    padding-left: 22px; /* Matches dropdown-menu a:hover text slide */
+    padding-left: 22px;
+    /* Matches dropdown-menu a:hover text slide */
   }
 
   /* Render chevrons cleanly on desktop as non-interactive symbols */
@@ -2112,15 +2119,15 @@ footer a:hover {
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
   }
-  
+
   /* Accordion rotation animations */
-  .nav-dropdown.open-dropdown > .nav-link-wrap > .nav-arrow-toggle {
+  .nav-dropdown.open-dropdown>.nav-link-wrap>.nav-arrow-toggle {
     transform: rotate(180deg);
     background: var(--accent-pale);
     color: var(--accent);
   }
 
-  .nav-submenu.open-submenu > .nav-link-wrap > .nav-arrow-toggle {
+  .nav-submenu.open-submenu>.nav-link-wrap>.nav-arrow-toggle {
     transform: rotate(90deg);
     background: var(--accent-pale);
     color: var(--accent);
@@ -2168,8 +2175,8 @@ footer a:hover {
   .submenu-menu.open-menu {
     display: block;
   }
-  
-  .dropdown-menu a, 
+
+  .dropdown-menu a,
   .submenu-menu a {
     padding: 8px 12px;
     border-radius: 6px;
@@ -2180,7 +2187,8 @@ footer a:hover {
   .submenu-menu a:hover,
   .dropdown-menu a.active,
   .submenu-menu a.active {
-    padding-left: 12px; /* Reset slide-in on mobile */
+    padding-left: 12px;
+    /* Reset slide-in on mobile */
   }
 }
 
@@ -2202,7 +2210,8 @@ footer a:hover {
 .scroll-progress-bar {
   height: 100%;
   width: 0%;
-  background: var(--accent); /* UMD Red */
+  background: var(--accent);
+  /* UMD Red */
   transition: width 0.1s ease-out;
 }
 
@@ -2379,7 +2388,7 @@ footer a:hover {
   margin-bottom: 28px;
 }
 
-.blog-content h2, 
+.blog-content h2,
 .blog-content h3 {
   font-family: var(--sans);
   color: var(--accent);
@@ -2399,7 +2408,7 @@ footer a:hover {
   font-size: 1.25rem;
 }
 
-.blog-content ul, 
+.blog-content ul,
 .blog-content ol {
   margin-bottom: 28px;
   padding-left: 24px;
@@ -2510,9 +2519,11 @@ footer a:hover {
   .timeline-wide {
     padding-left: 200px;
   }
+
   .timeline-wide::before {
     left: 160px;
   }
+
   .timeline-wide .tl-year {
     width: 140px;
     font-size: 0.95rem;
@@ -2603,7 +2614,8 @@ footer a:hover {
   margin-bottom: 12px;
 }
 
-.doc-fields, .doc-questions {
+.doc-fields,
+.doc-questions {
   list-style: none !important;
   padding-left: 0 !important;
 }
@@ -2685,9 +2697,11 @@ footer a:hover {
     gap: 6px;
     padding: 14px 16px;
   }
+
   .course-term {
     width: auto;
   }
+
   .course-grade {
     text-align: left;
   }
@@ -2793,4 +2807,12 @@ footer a:hover {
 .blog-signature strong {
   font-style: normal;
   color: var(--text);
-}
+}
+
+.natural-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 28px auto;
+  /* Adds 28px space above/below and centers the image */
+}
