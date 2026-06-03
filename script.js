@@ -204,3 +204,51 @@ function imgFailLdr(el) {
     });
   });
 })();
+
+// ===== Mobile Navigation Dropdown Accordion =====
+(function() {
+  const navLinks = document.getElementById('navLinks');
+  if (!navLinks) return;
+
+  const toggles = navLinks.querySelectorAll('.nav-arrow-toggle');
+  toggles.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      // Find the closest parent list items
+      const dropdownLi = btn.closest('.nav-dropdown');
+      const submenuLi = btn.closest('.nav-submenu');
+
+      if (submenuLi) {
+        // This is a second-level toggle inside the dropdown menu
+        submenuLi.classList.toggle('open-submenu');
+        const submenuMenu = submenuLi.querySelector('.submenu-menu');
+        if (submenuMenu) {
+          submenuMenu.classList.toggle('open-menu');
+        }
+      } else if (dropdownLi) {
+        // This is a first-level toggle in the main nav list
+        dropdownLi.classList.toggle('open-dropdown');
+        const dropdownMenu = dropdownLi.querySelector('.dropdown-menu');
+        if (dropdownMenu) {
+          dropdownMenu.classList.toggle('open-menu');
+        }
+      }
+    });
+  });
+})();
+
+// ===== Scroll Progress Bar =====
+(function() {
+  const bar = document.getElementById('scrollProgressBar');
+  if (!bar) return;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    bar.style.width = `${progress}%`;
+  }, { passive: true });
+})();
+

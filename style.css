@@ -1855,3 +1855,601 @@ footer a:hover {
     display: none;
   }
 }
+
+/* ==========================================================================
+   ACADEMIC RESOURCES & DROPDOWNS (UMD PORTAL INSPIRED)
+   ========================================================================== */
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-link-wrap {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Base styles for arrow toggle buttons (hidden on desktop, active on mobile) */
+.nav-arrow-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease, background 0.2s ease;
+  border-radius: 6px;
+}
+
+.nav-arrow-toggle:hover {
+  color: var(--accent);
+  background: var(--accent-pale);
+}
+
+/* First-Level Dropdown Container */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 300;
+  display: block;
+  min-width: 220px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  padding: 8px 0;
+  margin-top: 2px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
+}
+
+/* First-Level Dropdown Items */
+.dropdown-menu a {
+  display: block;
+  padding: 10px 18px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--text);
+  border-radius: 0;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a.active {
+  color: var(--accent);
+  background: var(--accent-pale);
+  padding-left: 22px; /* Smooth sliding text reveal */
+}
+
+/* Second-Level Sub-Dropdown Container (PhD Application Tips Submenu) */
+.nav-submenu {
+  position: relative;
+}
+
+.submenu-menu {
+  position: absolute;
+  top: -8px; /* Align with top of first item */
+  left: 100%;
+  z-index: 310;
+  display: block;
+  min-width: 260px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+  padding: 8px 0;
+  margin-left: -2px; /* Smooth hover bridge overlap */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
+}
+
+/* Second-level Submenu Items */
+.submenu-menu a {
+  display: block;
+  padding: 8px 18px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.submenu-menu a:hover,
+.submenu-menu a.active {
+  color: var(--accent);
+  background: var(--accent-pale);
+  padding-left: 22px;
+}
+
+/* Desktop Hover Triggers & Interactive Bridge */
+@media (min-width: 641px) {
+  /* Reveal first dropdown level */
+  .nav-dropdown:hover > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Reveal second dropdown level */
+  .nav-submenu:hover > .submenu-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  /* Interactive hover bridges - prevents mouseleave triggers in gaps */
+  .nav-dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: transparent;
+  }
+
+  .nav-submenu::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 12px;
+    height: 100%;
+    background: transparent;
+  }
+  
+  /* Styling helper to highlight parent element when a child is active */
+  .nav-dropdown:has(.active) > .nav-link-wrap > a {
+    color: var(--accent);
+    background: var(--accent-pale);
+  }
+
+  /* Render chevrons cleanly on desktop as non-interactive symbols */
+  .nav-arrow-toggle {
+    display: inline-block;
+    padding: 0;
+    margin-left: 4px;
+    font-size: 0.55rem;
+    pointer-events: none;
+    color: var(--text-muted);
+    vertical-align: middle;
+  }
+  
+  .nav-link-wrap:hover .nav-arrow-toggle,
+  .nav-dropdown:hover > .nav-link-wrap > .nav-arrow-toggle {
+    color: var(--accent);
+  }
+}
+
+/* Mobile Accordion Overrides for Phone Users */
+@media (max-width: 640px) {
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-link-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-link-wrap a {
+    flex-grow: 1;
+    display: block;
+  }
+
+  /* Large click target caret for mobile thumbs */
+  .nav-arrow-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: 0.7rem;
+    padding: 0;
+    margin-left: 10px;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+  }
+  
+  /* Accordion rotation animations */
+  .nav-dropdown.open-dropdown > .nav-link-wrap > .nav-arrow-toggle {
+    transform: rotate(180deg);
+    background: var(--accent-pale);
+    color: var(--accent);
+  }
+
+  .nav-submenu.open-submenu > .nav-link-wrap > .nav-arrow-toggle {
+    transform: rotate(90deg);
+    background: var(--accent-pale);
+    color: var(--accent);
+  }
+
+  /* Stacking the accordion instead of absolute floating */
+  .dropdown-menu {
+    position: static;
+    display: none;
+    min-width: 100%;
+    box-shadow: none;
+    border: none;
+    border-left: 2px solid var(--border);
+    margin-top: 4px;
+    margin-left: 10px;
+    padding: 4px 0 8px 12px;
+    background: transparent;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: none;
+  }
+
+  .dropdown-menu.open-menu {
+    display: block;
+  }
+
+  .submenu-menu {
+    position: static;
+    display: none;
+    min-width: 100%;
+    box-shadow: none;
+    border: none;
+    border-left: 2px solid var(--accent-pale);
+    margin-top: 4px;
+    margin-left: 10px;
+    padding: 4px 0 8px 12px;
+    background: transparent;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: none;
+  }
+
+  .submenu-menu.open-menu {
+    display: block;
+  }
+  
+  .dropdown-menu a, 
+  .submenu-menu a {
+    padding: 8px 12px;
+    border-radius: 6px;
+    white-space: normal;
+  }
+
+  .dropdown-menu a:hover,
+  .submenu-menu a:hover,
+  .dropdown-menu a.active,
+  .submenu-menu a.active {
+    padding-left: 12px; /* Reset slide-in on mobile */
+  }
+}
+
+/* ==========================================================================
+   SCROLL PROGRESS BAR
+   ========================================================================== */
+
+.scroll-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--accent); /* UMD Red */
+  transition: width 0.1s ease-out;
+}
+
+/* ==========================================================================
+   RESOURCES DASHBOARD & OVERVIEW PAGES
+   ========================================================================== */
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.resources-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: var(--shadow);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.resources-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(var(--accent-rgb), 0.2);
+}
+
+.resources-card-header {
+  margin-bottom: 16px;
+}
+
+.resources-card-category {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--warm);
+  margin-bottom: 8px;
+}
+
+.resources-card h2 {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  color: var(--accent);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.resources-card p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.resources-card-links {
+  margin-bottom: 24px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.resources-card-links h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+
+.resources-card-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.resources-card-links li a {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.resources-card-links li a:hover {
+  color: var(--accent);
+  padding-left: 4px;
+}
+
+.resources-card-links li a::before {
+  content: '→';
+  font-size: 0.8rem;
+  color: var(--warm);
+}
+
+.resources-card .btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* ==========================================================================
+   BLOG-STYLE CONTENT PAGES
+   ========================================================================== */
+
+.blog-container {
+  max-width: var(--max-text);
+  margin: 0 auto;
+  padding: 60px 32px 100px;
+}
+
+.blog-hero {
+  padding: calc(var(--nav-h) + 60px) 32px 40px;
+  background: linear-gradient(180deg, #faf5ea 0%, var(--bg) 100%);
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.blog-meta .read-time {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.blog-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.blog-hero-img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  background: var(--surface-alt);
+  margin-top: 10px;
+}
+
+.blog-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Typography for readable prose */
+.blog-content {
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 1.85;
+  color: var(--text);
+  margin-top: 40px;
+}
+
+.blog-content p {
+  margin-bottom: 28px;
+}
+
+.blog-content h2, 
+.blog-content h3 {
+  font-family: var(--sans);
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: 48px;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.blog-content h2 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.blog-content h3 {
+  font-size: 1.25rem;
+}
+
+.blog-content ul, 
+.blog-content ol {
+  margin-bottom: 28px;
+  padding-left: 24px;
+}
+
+.blog-content ul li {
+  list-style-type: disc;
+  margin-bottom: 10px;
+}
+
+.blog-content ol li {
+  list-style-type: decimal;
+  margin-bottom: 10px;
+}
+
+.blog-content strong {
+  font-family: var(--sans);
+  font-weight: 600;
+}
+
+.blog-content blockquote {
+  border-left: 4px solid var(--warm);
+  background: var(--warm-pale);
+  padding: 18px 24px;
+  margin: 32px 0;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.blog-content blockquote p {
+  margin-bottom: 0;
+}
+
+/* Callout Box inside content */
+.blog-callout {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-pale);
+  padding: 20px 24px;
+  margin: 32px 0;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.blog-callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* Contextual Navigation Hooks */
+.blog-context-nav {
+  margin-top: 60px;
+  border-top: 1px solid var(--border);
+  padding-top: 40px;
+}
+
+.blog-sibling-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.blog-sibling-links .btn {
+  flex: 1;
+  min-width: 200px;
+  justify-content: space-between;
+  padding: 14px 24px;
+}
+
+.blog-sibling-links .btn-prev::before {
+  content: '←';
+  margin-right: 8px;
+}
+
+.blog-sibling-links .btn-next::after {
+  content: '→';
+  margin-left: 8px;
+}
+
+.blog-parent-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px dashed var(--border);
+  padding-top: 24px;
+  text-align: center;
+}
+
+.blog-parent-links a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--warm);
+  transition: color 0.2s ease;
+}
+
+.blog-parent-links a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}

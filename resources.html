@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources — Hoang Trieu</title>
+  <meta name="description" content="Academic and grad school application resources by Hoang Trieu. Access detailed guides on US PhD applications, timelines, SOP writing, and recommendation letters." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..600;1,400..600&family=Plus+Jakarta+Sans:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">Hoang Trieu</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="thoughts.html">Thoughts</a></li>
+        <!-- <li><a href="ta.html">TA</a></li> -->
+        <li class="nav-dropdown">
+          <div class="nav-link-wrap">
+            <a href="resources.html" class="nav-link-text">Resources</a>
+            <button type="button" class="nav-arrow-toggle" aria-label="Toggle Resources Submenu">▼</button>
+          </div>
+          <ul class="dropdown-menu">
+            <li class="nav-submenu">
+              <div class="nav-link-wrap">
+                <a href="phd-tips.html" class="nav-link-text">PhD Application Tips</a>
+                <button type="button" class="nav-arrow-toggle" aria-label="Toggle PhD Tips Submenu">▶</button>
+              </div>
+              <ul class="submenu-menu">
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="phd-us.html">PhD Application in the US</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="school-research.html">School Research</a></li>
+                <li><a href="recommendations.html">Letters of Recommendation</a></li>
+                <li><a href="sop.html">Personal Statement/SOP</a></li>
+                <li><a href="other-docs.html">Other Documents</a></li>
+                <li><a href="post-application.html">Post-Application</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="leadership.html">Leadership</a></li>
+        <!-- <li><a href="travel.html">Travel</a></li> -->
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container-text">
+      <p class="page-hero-eyebrow">Academic Dashboard</p>
+      <h1 id="resources-title">Resources &amp; Guides</h1>
+      <p>A collection of structured advice, materials, and guides aimed at helping undergraduate students navigate research opportunities and graduate school admissions in STEM fields.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="resources-grid" id="resourcesGrid">
+
+        <!-- PhD Application Tips Card -->
+        <article class="resources-card reveal" id="cardPhdTips">
+          <div class="resources-card-header">
+            <span class="resources-card-category">Featured Guide</span>
+            <h2>PhD Application Tips</h2>
+          </div>
+          <p>A step-by-step roadmap on applying for Applied Mathematics and STEM PhD programs in the US, based on my firsthand experience securing admissions for Fall 2026.</p>
+          
+          <div class="resources-card-links">
+            <h4>Chapters Included:</h4>
+            <ul>
+              <li><a href="introduction.html">Introduction &amp; Core Motivation</a></li>
+              <li><a href="phd-us.html">PhD Applications in the US vs. Europe</a></li>
+              <li><a href="timeline.html">Timeline (Standard 15-Month Plan)</a></li>
+              <li><a href="school-research.html">School &amp; Advisor Research Strategies</a></li>
+              <li><a href="recommendations.html">Letters of Recommendation (LOR) Guide</a></li>
+              <li><a href="sop.html">Writing Your Personal Statement &amp; SOP</a></li>
+              <li><a href="other-docs.html">Transcripts, CVs, and Other Documents</a></li>
+              <li><a href="post-application.html">Interviews &amp; Post-Application Steps</a></li>
+            </ul>
+          </div>
+
+          <a href="phd-tips.html" class="btn btn-primary" id="btnPhdTips">View Full Guide Overview</a>
+        </article>
+
+        <!-- Teaching Assistant Card (Placeholder for visual completeness) -->
+        <article class="resources-card reveal" style="opacity:0.8;" id="cardTaHandouts">
+          <div class="resources-card-header">
+            <span class="resources-card-category">Teaching Handouts</span>
+            <h2>Teaching &amp; SI Handouts</h2>
+          </div>
+          <p>Worksheets, practice problem sets, and answers key files from my calculus and differential equations supplemental instruction sessions at Augustana College.</p>
+          
+          <div class="resources-card-links">
+            <h4>Featured Material:</h4>
+            <ul>
+              <li><a href="ta.html">Differential Equations (MATH-320) Handouts</a></li>
+              <li><a href="ta.html">Calculus II (MATH-220) Worksheets</a></li>
+              <li><a href="ta.html">Multivariable Calculus (MATH-260) Study Sheets</a></li>
+            </ul>
+          </div>
+
+          <a href="ta.html" class="btn btn-outlined" id="btnTaHandouts">View Teaching Portal</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Hoang Trieu &nbsp;&middot;&nbsp;
+        <a href="mailto:hmtrieu@umd.edu">hmtrieu@umd.edu</a> &nbsp;&middot;&nbsp;
+        <a href="https://www.linkedin.com/in/hoangtrieu1905/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
