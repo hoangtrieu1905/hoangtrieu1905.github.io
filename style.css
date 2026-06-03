@@ -142,6 +142,8 @@ sup {
 }
 
 .nav-links a {
+  display: inline-flex;
+  align-items: center;
   padding: 6px 14px;
   border-radius: 8px;
   font-size: .84rem;
@@ -1865,9 +1867,9 @@ footer a:hover {
 }
 
 .nav-link-wrap {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
 }
 
 /* Base styles for arrow toggle buttons (hidden on desktop, active on mobile) */
@@ -1935,8 +1937,9 @@ footer a:hover {
 .submenu-menu {
   position: absolute;
   top: -8px; /* Align with top of first item */
-  left: 100%;
-  z-index: 310;
+  left: auto;
+  right: 100%;
+  z-index: 1000; /* Prevent transparency bleeding */
   display: block;
   min-width: 260px;
   background: var(--surface);
@@ -1944,10 +1947,10 @@ footer a:hover {
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-lg);
   padding: 8px 0;
-  margin-left: -2px; /* Smooth hover bridge overlap */
+  margin-right: -2px; /* Smooth hover bridge overlap (left side) */
   opacity: 0;
   visibility: hidden;
-  transform: translateX(10px);
+  transform: translateX(-10px); /* Slide from left */
   transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
 }
 
@@ -2000,32 +2003,80 @@ footer a:hover {
     content: '';
     position: absolute;
     top: 0;
-    left: 100%;
+    right: 100%;
     width: 12px;
     height: 100%;
     background: transparent;
   }
   
-  /* Styling helper to highlight parent element when a child is active */
-  .nav-dropdown:has(.active) > .nav-link-wrap > a {
+  /* Styling helper for main nav item wrapper on desktop */
+  .nav-links > li > .nav-link-wrap {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 8px;
+    color: var(--text-muted);
+    transition: color .2s, background .2s;
+    gap: 4px;
+  }
+
+  .nav-links > li > .nav-link-wrap a {
+    padding: 0 !important;
+    background: transparent !important;
+    color: inherit !important;
+  }
+
+  /* Hover highlights the entire wrapper (including chevron) on desktop */
+  .nav-links > li > .nav-link-wrap:hover,
+  .nav-links > li.nav-dropdown:hover > .nav-link-wrap,
+  .nav-links > li > .nav-link-wrap.active {
     color: var(--accent);
     background: var(--accent-pale);
+  }
+  
+  /* Highlight parent wrapper if child is active */
+  .nav-links > li.nav-dropdown:has(.active) > .nav-link-wrap {
+    color: var(--accent);
+    background: var(--accent-pale);
+  }
+
+  /* Dropdown sub-menu item wrapper ("PhD Application Tips") on desktop */
+  .dropdown-menu .nav-submenu > .nav-link-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 18px;
+    font-size: 0.84rem;
+    font-weight: 500;
+    color: var(--text);
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .dropdown-menu .nav-submenu > .nav-link-wrap a {
+    padding: 0 !important;
+    background: transparent !important;
+    color: inherit !important;
+  }
+
+  .dropdown-menu .nav-submenu > .nav-link-wrap:hover,
+  .dropdown-menu .nav-submenu:hover > .nav-link-wrap {
+    color: var(--accent);
+    background: var(--accent-pale);
+    padding-left: 22px; /* Matches dropdown-menu a:hover text slide */
   }
 
   /* Render chevrons cleanly on desktop as non-interactive symbols */
   .nav-arrow-toggle {
     display: inline-block;
     padding: 0;
-    margin-left: 4px;
+    margin-left: 0;
     font-size: 0.55rem;
     pointer-events: none;
-    color: var(--text-muted);
+    color: inherit;
+    background: transparent;
     vertical-align: middle;
-  }
-  
-  .nav-link-wrap:hover .nav-arrow-toggle,
-  .nav-dropdown:hover > .nav-link-wrap > .nav-arrow-toggle {
-    color: var(--accent);
+    border: none;
   }
 }
 
